@@ -89,10 +89,8 @@ HTML_REPORT="${SCAN_DIR}/report.html"
 SUMMARY_JSON="${SCAN_DIR}/summary.json"
 
 # ── Build nmap command ────────────────────────────────────────────────────────
-NMAP_ARGS=(-sS -sV -O --osscan-guess -A)
+NMAP_ARGS=(-sS -sV)
 NMAP_ARGS+=(--script "vuln")
-NMAP_ARGS+=(-T"$TIMING")
-NMAP_ARGS+=(--reason)
 NMAP_ARGS+=(-oX "$RAW_XML" -oN "$RAW_TXT")
 
 [[ -n "$PORTS" ]] && NMAP_ARGS+=(-p "$PORTS") || NMAP_ARGS+=(--top-ports 1000)
@@ -105,8 +103,6 @@ echo "╚═══════════════════════�
 echo -e "${RESET}"
 info "Target   : ${BOLD}$TARGET${RESET}"
 info "Output   : ${BOLD}$SCAN_DIR${RESET}"
-info "Timing   : T${TIMING}"
-[[ -n "$PORTS" ]] && info "Ports    : $PORTS" || info "Ports    : top 1000"
 info "Started  : $(date '+%Y-%m-%d %H:%M:%S')"
 echo ""
 
