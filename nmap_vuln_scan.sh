@@ -90,7 +90,7 @@ SUMMARY_JSON="${SCAN_DIR}/summary.json"
 
 # ── Build nmap command ────────────────────────────────────────────────────────
 NMAP_ARGS=(-sS -sV -O --osscan-guess -A)
-NMAP_ARGS+=(--script "vuln,vulners,auth,default,safe")
+NMAP_ARGS+=(--script "vuln")
 NMAP_ARGS+=(-T"$TIMING")
 NMAP_ARGS+=(--reason)
 NMAP_ARGS+=(-oX "$RAW_XML" -oN "$RAW_TXT")
