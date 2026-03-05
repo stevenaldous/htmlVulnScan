@@ -100,7 +100,7 @@ NMAP_ARGS+=(-oX "$RAW_XML" -oN "$RAW_TXT")
 # ── Banner ────────────────────────────────────────────────────────────────────
 echo -e "${BOLD}"
 echo "╔══════════════════════════════════════════════════════╗"
-echo "║         NMAP VULNERABILITY SCANNER                  ║"
+echo "║         NMAP VULNERABILITY SCANNER                   ║"
 echo "╚══════════════════════════════════════════════════════╝"
 echo -e "${RESET}"
 info "Target   : ${BOLD}$TARGET${RESET}"
@@ -457,7 +457,7 @@ html = f'''<!DOCTYPE html>
     --medium:    #fb8c00;
     --low:       #fdd835;
     --text:      #cdd8e8;
-    --muted:     #546e7a;
+    --muted:     #faf9f6;
     --mono:      'Share Tech Mono', monospace;
     --sans:      'Rajdhani', sans-serif;
   }}
@@ -616,7 +616,7 @@ html = f'''<!DOCTYPE html>
   .vuln-id     {{ font-family: var(--mono); font-size: .78rem; color: var(--muted); }}
   .vuln-title  {{ font-size: .85rem; font-weight: 600; color: #fff; flex: 1; min-width: 120px; }}
   .script-tag  {{ font-family: var(--mono); font-size: .67rem; background: rgba(0,229,255,.08); color: var(--accent); border: 1px solid rgba(0,229,255,.2); border-radius: 3px; padding: 1px 6px; }}
-  .vuln-desc   {{ font-size: .78rem; color: var(--muted); line-height: 1.5; margin-top: 4px; white-space: pre-wrap; }}
+  .vuln-desc   {{ font-size: 1rem; color: var(--muted); line-height: 1.5; margin-top: 4px; white-space: pre-wrap; }}
   .vuln-refs   {{ margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px; }}
   .ref-link    {{ font-family: var(--mono); font-size: .7rem; color: var(--accent); text-decoration: none; background: rgba(0,229,255,.06); padding: 2px 6px; border-radius: 3px; word-break: break-all; }}
   .ref-link:hover {{ background: rgba(0,229,255,.15); }}
